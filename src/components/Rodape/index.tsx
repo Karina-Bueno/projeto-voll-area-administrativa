@@ -34,10 +34,18 @@ function Rodape() {
                 <ItemEstilizado>
                     <a href="#">
                         <ImagemEstilizada src={facebook} alt="logo do facebook" />
+                    </a>
+                    <a href="#">
                         <ImagemEstilizada src={google} alt='logo do google' />
+                    </a> 
+                    <a href="#">
                         <ImagemEstilizada src={instagram} alt='logo do instagram' />
+                    </a>
+                    <a href="#">
                         <ImagemEstilizada src={whatsapp} alt='logo do whatsapp' />
                     </a>
+                        
+                    
                 </ItemEstilizado>
             </ListaEstilizada>
             <ParagrafoEstilizado>2024 © Desenvolvido por Alura | Projeto fictício sem fins comerciais. </ParagrafoEstilizado>

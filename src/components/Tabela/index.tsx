@@ -14,6 +14,12 @@ const CelulaEstilizada = styled(TableCell)(() => ({
         fontFamily: "var(--fonte-principal)"
     }
 }))
+const LinhaEstilizada = styled(TableRow)(() => ({
+    [`&:nth-of-type(odd)`]: {
+        backgroundColor: "var(--cinza-claro)",
+        align: "right"
+    }
+}))
 function Tabela({consultas} : { consultas : IConsulta[] | null }) {
     return (
         <>
@@ -32,14 +38,14 @@ function Tabela({consultas} : { consultas : IConsulta[] | null }) {
                     <TableBody>
                         {consultas?.map((linha) => {
                             return (
-                                <TableRow>
+                                <LinhaEstilizada>
                                     <CelulaEstilizada component="th" scope="row">{new Date (linha.data).toLocaleDateString()}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.horario}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.profissional[0].nome}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.profissional[0].especialidade}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.paciente}</CelulaEstilizada>
                                     <CelulaEstilizada>{linha.modalidade}</CelulaEstilizada>
-                                </TableRow>
+                                </LinhaEstilizada>
                             )
                         })}
                         
